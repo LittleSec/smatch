@@ -1,6 +1,7 @@
 #!/bin/bash
 
-NR_CPU=$(cat /proc/cpuinfo | grep ^processor | wc -l)
+# NR_CPU=$(cat /proc/cpuinfo | grep ^processor | wc -l)
+NR_CPU=1
 TARGET="bzImage modules"
 WLOG="smatch_warns.txt"
 LOG="smatch_compile.warns"
@@ -53,6 +54,7 @@ else
 fi
 
 make clean
+make defconfig
 find -name \*.c.smatch -exec rm \{\} \;
 make -j${NR_CPU} $ENDIAN -k CHECK="$CMD -p=kernel --file-output $*" \
 	C=1 $TARGET 2>&1 | tee $LOG
