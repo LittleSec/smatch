@@ -1,6 +1,8 @@
 Python module for parsing kernel.implicit_dependencies
 
-`python main.py -h` for usage.
-run `python main.py -v -p` to generate verbose and pretty print.
+Just work for python2, not compatible with python3
+
+`python2.7 main.py -h` for usage.
+run `python2.7 main.py -v -p` to generate verbose and pretty print.
 
 To generate kernel.implicit_dependencies, run `smatch_scripts/build_kernel_data.sh`

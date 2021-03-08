@@ -1,3 +1,4 @@
+#!/usr/bin/python2.7
 from collections import defaultdict
 
 # location of kernel.implicit_dependencies
